@@ -1,369 +1,247 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.intro-image {
+    max-width: 75%;
+}
+
+nav {
+    background-color: #fff;
     display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px 30px 100px;
+    margin: auto
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #1d1d24;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #274472
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #274472;
+    transition: 0.3s;
+    bottom: 0;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.btn {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    background-size: 152% 100%;
+    background: #274472;
+    border: 2px solid #274472;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: #274472;
+    color: #274472;
+}
+
+.content {
+    width: 100%;
+    padding: 10% 5% 0% 5%;
+}
+
+.intro {
+    width: 70%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.intro-image-div {
+    width: 25%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.intro-image {
+    max-width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 30px 100px 30px 100px;
+    margin: auto
+}
+
+.footer {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    padding: 5% 10% 5% 10%;
 }
 
-.container {
-    width: 360px;
-    margin: 0 auto;
+.email {
+    color: #274472;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container { 
-        width: 800px;
-    }
-    
-    .musts {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        column-gap: 40px;
-        padding:1em;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: x-small;
-    }
-
-    .musts span {
-        width: 300px;
-        border: 1px solid #ddd;
-        border-radius: 20px;
-        margin: 10px;
-    }
-
-    #must1 {
-        display: inline-block;
-        inset-inline:right;
-        width: 180px;
-
-    }
- 
-    #must2 {
-        display: inline-block;
-        inset-inline:right;
-        width: 180px;
-    }
-
-    #must3 {
-        display: inline-block;
-        inset-inline:right;
-        width: 180px;
-    }
-
-}
-
-@media screen and (min-width: 1024px) and (max-width: 4000px) {
-    .container { 
-        width: 800px;
-    }
-
-    .links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        column-gap: 40px;
-        padding:1em;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-     }
-    
-    .links span {
-        width: 300px;
-        padding: 10px 15px;
-        border: 1px solid #ddd;
-        border-radius: 20px;
-        margin: 10px;
-     }
-     
-    #categories {
-        display: inline-block;
-        inset-inline:right;
-    
-     }
-     
-    #quick {
-        display: inline-block;
-        inset-inline:right;
-        
-     }
-}
-    .menu {
-    font: 1em Georgia;
-    text-align: center;
-    background:#fff;
-    border-bottom:1px solid pink;
-    border-top:1px solid pink;
-    }
-    
-    .menu li {
-    display:inline-block;
-    padding:5px 15px 4px 15px;
-    }
-    
-    .menu li a {
-        color: black;
-        text-decoration: none;
-        }
-    .menu li a:visited {
-        color: hotpink;
-        }
-    .menu li a:hover {
-        color: lightblue;
-        }
-    .menu li a:active {
-        color: blue;
-    }
-
-h2 {
-  color: rgb(253, 182, 255);
-  text-align: center;
-}
-
-
-.topic {
-    font-size: 150%;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(231, 169, 228);
-}
-
-#task {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-.musts {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    padding:1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
-
- .musts span {
-    width: 300px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    margin: 10px;
- }
- 
- #must1 {
+#contacts1 {
     display: inline-block;
-    inset-inline:right;
-
- }
- 
- #must2 {
-    display: inline-block;
-    inset-inline:right;
-
- }
-
- #must3 {
-    display: inline-block;
-    inset-inline:right;
- }
-
-
-#italic {
-    font-style: italic;
-    font-size: smaller;
- }
-
-#names { 
-color: purple;
-font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#submit {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black
-}
-
-#submit2 {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black
-}
-
-#submit3 {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black
-}
-
-#table {
-    background-color: lightgray;
+.header-title {
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
     margin: auto;
-    font-style: oblique;
-    font-family: Georgia, 'Times New Roman', Times, serif;    
-    }
-
-#grading {
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black
 }
 
-#group {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: larger;
-    color: black
-}
-
-.important {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-h6 {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(233, 79, 194);
-    font-size: x-large;
-}
-
-#dummycontent {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    padding:1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#dummycontent span {
-    width: 300px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    margin: 10px;
-    orientation: horizontal;
- }
-
- #dummy1 {
-    display: inline-block;
-    inset-inline:right;
- }
- 
- #dummy2 {
-    display: inline-block;
-    inset-inline:right;
- }
-
- #dummy3 {
-    display: inline-block;
-    inset-inline:right;
- }
-
-#dummycontent {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: larger;
-    font-style: oblique;
-    color: black
-}
-
-.cont {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    padding:1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.cont span {
-    margin: 10px;
- }
-
- #contacts {
-    display: inline-block;
- }
-
- #map {
-    display: inline-block;
- }
-
-h1:hover {
-    background-color: rgb(122, 56, 91);
-}
-
-a[href="#SignIn"] {
-    background-color: lightpink;
-}
-
-#image1 {
+.footer-content {
     width: 100%;
-    height: auto;
 }
 
-#image2 {
+.content .title {
+    color: #0a0a0a;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg,
+
+            #274472 20.69%,
+
+            #41729F 50.19%,
+
+            #5885AF79.69%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content h1 {
+    color: #1f1f25;
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+
+.content h1 span {
+    color: #274472;
+}
+
+.content p {
+    width: 55%;
+    color: #202020;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.skills {
     width: 100%;
-    height: auto;
+    padding: 0% 5% 0% 5%;
 }
 
-#image3 {
-    padding: 5px;
-    width: 220px;
-    height: 120px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image4 {
+.skill {
+    width: 33%;
     padding: 20px;
-    width: 120px;
-    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    background:
+        #bfdefc;
 }
 
-#categories {
-    display: inline;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
-
-    .categories li a {
-        color: black;
-        text-decoration: none;
-        }
-    .categories li a:visited {
-        color: hotpink;
-        }
-    .categories li a:hover {
-        color: lightblue;
-        }
-    .categories li a:active {
-        color: blue;
-    }
-
-#quick {
-    display: inline;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
- 
-
-.quicks li a {
-    color: black;
-    text-decoration: none;
-    }
-.quicks li a:visited {
-    color: hotpink;
-    }
-.quicks li a:hover {
-    color: lightblue;
-    }
-.quicks li a:active {
-    color: blue;
+.skill:hover {
+    box-shadow: 5px 3px 30px #41729F;
 }
 
+.experience {
+    width: 49%;
+    padding: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    background:
+        #bfdefc;
+}
+
+.experience:hover {
+    box-shadow: 5px 3px 30px #41729F;
+}
+
+.skill-title {
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    background:
+        #41729F;
+    color: #fff;
+    border-width: 0.3em;
+    border-style: solid;
+    border-color: #fff;
+}
+
+.skill-text {
+    padding-top: 10px;
+}
+
+blockquote {
+    margin: 3.7em auto;
+    padding: 2em;
+    background: linear-gradient(white, white) padding-box;
+    border: 2em solid transparent;
+    box-shadow: 5px 3px 30px #41729F;
+    font-size: 1.4em;
+    font-family: "Lora", serif;
+    font-style: italic;
+    line-height: 1.5;
+    width: 40%;
+}
+
+footer {
+    padding-top: 1.3em;
+}
+
+cite {
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lora);
